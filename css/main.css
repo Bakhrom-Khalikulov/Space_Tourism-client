@@ -1,45 +1,45 @@
 /* barlow-condensed-regular - latin */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Barlow Condensed';
-  font-style: normal;
-  font-weight: 400;
-  src: url('../fonts/barlow-condensed-v12-latin-regular.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
-       url('../fonts/barlow-condensed-v12-latin-regular.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Barlow Condensed';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/barlow-condensed-v12-latin-regular.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
+    url('../fonts/barlow-condensed-v12-latin-regular.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 /* barlow-condensed-700 - latin */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Barlow Condensed';
-  font-style: normal;
-  font-weight: 700;
-  src: url('../fonts/barlow-condensed-v12-latin-700.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
-       url('../fonts/barlow-condensed-v12-latin-700.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Barlow Condensed';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/barlow-condensed-v12-latin-700.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
+    url('../fonts/barlow-condensed-v12-latin-700.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
 /* barlow-regular - latin */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Barlow';
-  font-style: normal;
-  font-weight: 400;
-  src: url('../fonts/barlow-v12-latin-regular.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
-       url('../fonts/barlow-v12-latin-regular.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Barlow';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/barlow-v12-latin-regular.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
+    url('../fonts/barlow-v12-latin-regular.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 /* barlow-700 - latin */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Barlow';
-  font-style: normal;
-  font-weight: 700;
-  src: url('../fonts/barlow-v12-latin-700.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
-       url('../fonts/barlow-v12-latin-700.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Barlow';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/barlow-v12-latin-700.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
+    url('../fonts/barlow-v12-latin-700.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
 :root{
-     --main-bg-color: #000;
-     --main-text-color: #fff;
-     --text-desc-color: #D0D6F9;
+    --main-bg-color: #000;
+    --main-text-color: #fff;
+    --text-desc-color: #D0D6F9;
 }
 
 html{
@@ -59,9 +59,13 @@ body{
     flex-direction: column;
     height: 100%;
     margin: 0;
-    font-family: "Arial", sans-serif;
+    font-family: 'Barlow Condensed', "Arial", sans-serif;
     font-weight: 400;
-    background-color: #fff;
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
+    background-image: url(../images/earth.png);
+    background-repeat: no-repeat;
+    background-position: calc(50% + 240px), calc(50% + 200px);
 }
 
 img{
@@ -102,3 +106,73 @@ ul{
 a{
     text-decoration: none;
 }
+
+/* *********** HEADER STYLE STARTS************* */
+.site-header{
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.header__wrapper{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sitenav__list{
+    padding: 39px 167px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 830px;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(40.7742px);
+}
+
+.sitenav__list::before{
+    position: absolute;
+    display: block;
+    content: "";
+    width: 473px;
+    height: 1px;
+    background-color: var(--main-text-color);
+    mix-blend-mode: normal;
+    opacity: 0.25;
+    left: -420px;
+}
+
+.sitenav__item:not(:last-child){
+    margin-right: 50px;
+}
+
+.sitenav__link{
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 2.7px;
+    color: var(--main-text-color);
+}
+
+
+
+
+
+
+
+
+/* *********** HEADER STYLE ENDS************* */
+
+
+/* *********** MAIN STYLE STARTS************* */
+
+/* *********** HERO STYLE STARTS************* */
+
+
+
+
+
+/* *********** HERO STYLE ENDS************* */
+
+/* *********** MAIN STYLE ENDS************* */
