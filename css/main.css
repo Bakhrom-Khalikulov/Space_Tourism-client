@@ -36,10 +36,21 @@
     url('../fonts/barlow-v12-latin-700.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
+/* bellefair-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Bellefair';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/bellefair-v14-latin-regular.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
+    url('../fonts/bellefair-v14-latin-regular.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
 :root{
     --main-bg-color: #000;
     --main-text-color: #fff;
     --text-desc-color: #D0D6F9;
+    --explore--text-color: #0B0D17;
 }
 
 html{
@@ -154,24 +165,74 @@ a{
     letter-spacing: 2.7px;
     color: var(--main-text-color);
 }
-
-
-
-
-
-
-
-
 /* *********** HEADER STYLE ENDS************* */
 
 
 /* *********** MAIN STYLE STARTS************* */
+.site-main{
+    
+}
 
 /* *********** HERO STYLE STARTS************* */
+.hero-section{
+    padding-top: 211px;
+    padding-bottom: 131px;
+}
 
+.hero__wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
 
+.hero__wrapper--start{
+    width: 445px;
+    margin-left: 192px;
+}
 
+.hero__subtitle{
+    margin-top: 0;
+    margin-bottom: 24px;
+    font-size: 28px;
+    line-height: 34px;
+    letter-spacing: 4.725px;
+    color: var(--text-desc-color);
+}
 
+.hero__title{
+    margin-top: 0;
+    margin-bottom: 24px;
+    font-family: 'Bellefair';
+    font-weight: 400;
+    font-size: 150px;
+    line-height: 172px;
+    color: var(--main-text-color); 
+}
+
+.hero__desc{
+    margin-top: 0;
+    margin-bottom: 0;
+    font-family: 'Barlow';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 32px;
+    color: var(--text-desc-color);
+}
+
+.hero__link{
+    margin-top: 0;
+    margin-right: 130px;
+    margin-bottom: 0;
+    padding: 119px 64px;
+    font-family: 'Bellefair';
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 37px;
+    letter-spacing: 2px;
+    color: var(--explore--text-color);
+    background-color: var(--main-text-color);
+    border-radius: 50%;
+}
 
 /* *********** HERO STYLE ENDS************* */
 
